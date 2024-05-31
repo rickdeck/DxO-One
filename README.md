@@ -99,11 +99,20 @@ Possibly, this could work with a lightning port to USB-C adapter (not tested, ha
 **2. Prepare DxO-ONE:**
 <details>
   <summary>1. Add autoexec.ash file to SD-card</summary>
-    A script on the SD-card will be executed on power-on of the camera and will redirect the USB-connection of the Lightning port to the microUSB (disabling Mass-Storage support on the microUSB port)
-  
+    
+   A script on the SD-card will be executed on power-on of the camera and will redirect the USB-connection of the Lightning port to the microUSB (disabling Mass-Storage support on the microUSB port).
+   The setting is permanent (the command only needs to be executed once), so to revert it again another command needs to be sent,
+   
+   You can download both of them here: [Enable Lightning via microUSB]( https://github.com/rickdeck/DxO-One/blob/main/Autoexec%20Scripts/AndroidApp-Enable), [Disable Lightning via microUSB]( https://github.com/rickdeck/DxO-One/blob/main/Autoexec%20Scripts/AndroidApp-Disable )
+
     ```
+    # Enable Lightning via microUSB
     t dxo micro_usb_connected_toggle on
-    (empty)
+    t dxo iap2_toggle off
+    
+    # Disable Lightning via microUSB (remove leading # to apply)
+    # t dxo micro_usb_connected_toggle off
+    # t dxo iap2_toggle auto
     ```
   
 </details>
