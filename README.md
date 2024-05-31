@@ -11,6 +11,8 @@ Contribution is very welcome!
    2. Linux OS
    3. Firmware binary Analysis
 4. Smartphone App
+   1. Connect DxO-One with Lightning Port to the Android App
+   2. Developer Mode
 
 ## Hardware BOM & Details
 - **ODM Manufacturer:** Ability Enterprise Co., Ltd TAIWAN
