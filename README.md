@@ -57,6 +57,7 @@ To start investigating the Device, the first step is to re-route logging to a fi
 <details>
   <summary>Log RTOS to SD-card</summary>
 
+   Download here: [Log-to-SD]( https://github.com/rickdeck/DxO-One/tree/main/Autoexec%20Scripts/Log-to-SD )
   ```
   t dxo console 8
   (empty)
