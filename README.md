@@ -41,16 +41,16 @@ This is a quite popular chipset for (older) GoPro and other Action Camera clones
 
 It seems that in case of the DxO-One, the Linux OS is mostly suspended and only woken up on-demand to connect to Wi-Fi. It might be interesting to achieve a shell to this OS, as it could allow adding wireless features (like FTP-transfer of images or 3rd party Wi-Fi control)
 
-Ambarella OS has a own shell which can accept commands, but as the device is missing a UART-port I didn't find a way so far to connect to it (I still suspect that it's possible to switch the USB-Port to UART, but I haven't found a method yet.
+Ambarella OS has a own shell which can accept commands, but as the device is missing a UART-port I didn't find a way so far to connect to it (I suspect that it's possible to switch the USB-Port to UART, but I haven't found a method yet).
 
 
 ### Ambarella RTOS
 #### autoexec.ash:
-On power-on (sliding the lens-cover open or connecting USB), the OS looks for the file autoexec.ash on the SD-Card and, if it exists, executes the shell-commands in it on the RTOS.
+On power-on (sliding the lens-cover open or connecting USB), the OS looks for the file `autoexec.ash` on the SD-Card and, if it exists, executes the shell-commands in it on the RTOS.
 This allows to do a few interesting things, such as enabling logging, switching USB-Modes, executing commands, etc.
 
 > [!IMPORTANT]
-> 1. autoexec.ash needs to be stored at the root of the microSD-card (together with the DCIM-Folder)
+> 1. `autoexec.ash` needs to be stored at the root of the microSD-card (together with the DCIM-Folder)
 > 2. Line-breaks need to be in Unix-format (LF, not CR LF)
 > 3. Each command must be finished with a line-break, so the last line of the file should be empty.
 
@@ -101,7 +101,7 @@ Possibly, this could work with a lightning port to USB-C adapter (not tested, ha
 
 **2. Prepare DxO-ONE:**
 <details>
-  <summary>1. Add autoexec.ash file to SD-card</summary>
+  <summary>1. Add `autoexec.ash` file to SD-card</summary>
     
    A script on the SD-card will be executed on power-on of the camera and will redirect the USB-connection of the Lightning port to the microUSB (disabling Mass-Storage support on the microUSB port).
    The setting is permanent (the command only needs to be executed once), so to revert it again another command needs to be sent,
