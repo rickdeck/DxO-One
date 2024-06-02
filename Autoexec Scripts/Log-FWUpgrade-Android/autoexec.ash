@@ -20,4 +20,4 @@ t t ipclinux_debug 1
 t t ui 1
 t t ui_debug 1
 
-dmesg rtos -500 > c:\dmesglog_rtos.txt
+dmesg rtos -1000 > c:\dmesglog_rtos.txt
