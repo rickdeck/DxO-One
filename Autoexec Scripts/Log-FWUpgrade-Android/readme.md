@@ -18,10 +18,12 @@
 11. Insert microSD in your PC. If the script was correctly executed you will find a file called `fwver.txt` on your card. Save it to your PC as `fwver_after.txt`
 
 ### Collect logs
-12. Insert microSD in your PC, copy `console_debug.txt`, `dmesglog_rtos.txt` to your PC.
+12. (Insert microSD in your PC), copy `console_debug.txt`, `dmesglog_rtos.txt` to your PC.
 13. Make a ZIP-file with the following files:
     `console_debug.txt`
     `dmesglog_rtos.txt`
     `fwver_before.txt`
     `fwver_after.txt`
-14. Comment on [this](https://github.com/rickdeck/DxO-One/issues/1) issue with your target-firmware and the zip-file
+14. Comment on [this](https://github.com/rickdeck/DxO-One/issues/1) issue with your target-firmware and the zip-file.
+
+Thanks!
