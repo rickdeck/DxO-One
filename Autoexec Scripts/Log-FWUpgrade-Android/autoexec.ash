@@ -13,6 +13,8 @@ t t usbx 1
 t t usb_debug 1
 t t update 1
 t t update_debug 1
+t t card_upgrade 1
+t t card_upgrade_debug 1
 t t protocol 1
 t t protocol_debug 1
 t t ipclinux 1
