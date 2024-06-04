@@ -12,11 +12,11 @@ Possibly, this could work with a lightning port to USB-C adapter (not tested, ha
 > The two cables can also be replaced with a single USB-C OTG to microUSB cable, like [this]( https://sunguy.com/collections/micro-usb-cable/products/sunguy-micro-usb-to-usb-c-right-angle-cable-b030bc-charging-cable-wholesale-customized ) one.
 
 **2. Prepare DxO-ONE:**
-<details>
-  <summary>1. Add `autoexec.ash` file to SD-card</summary>
-    
-   A script on the SD-card will be executed on power-on of the camera and will redirect the USB-connection of the Lightning port to the microUSB (disabling Mass-Storage support on the microUSB port).
-   The setting is permanent (the command only needs to be executed once), so to revert it again another command needs to be sent,
+  1. Add `autoexec.ash` file to SD-card
+
+     A script on the SD-card will be executed on power-on of the camera and will redirect the USB-connection of the Lightning port to the microUSB (disabling Mass-Storage support on the microUSB port).
+   > [!IMPORTANT]
+   > The setting is permanent (the command only needs to be executed once), so to disable it again, the disable-script needs to be executed,
    
    You can download both of them here: [Enable Lightning via microUSB]( https://github.com/rickdeck/DxO-One/blob/main/Autoexec%20Scripts/AndroidApp-Enable), [Disable Lightning via microUSB]( https://github.com/rickdeck/DxO-One/blob/main/Autoexec%20Scripts/AndroidApp-Disable )
 
@@ -41,6 +41,6 @@ Possibly, this could work with a lightning port to USB-C adapter (not tested, ha
 
 If everything works as expected, the app will launch, connect to the camera and switch to the viewfinder.
 
-**Limitations:**
+**4. Limitations:**
 1. Wi-Fi connection between Smartphone and DXO-ONE doesn't work (apparently some protocol-issue I didn't look into yet)
 2. Not really convenient to use as viewfinder, but good to change settings on the camera (current app-setting is preserved by the camera and kept after disconnecting)
