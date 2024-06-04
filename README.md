@@ -13,6 +13,8 @@ Contribution is very welcome!
 3. Interesting things
    1. Connect DxO-One with Lightning Port to the Android App
 
+More information is available in the [wiki](https://github.com/rickdeck/DxO-One/wiki).
+
 ## Hardware BOM & Details
 - **ODM Manufacturer:** Ability Enterprise Co., Ltd TAIWAN
 - **FCC ID:** 2AAD3JA0J0M0
