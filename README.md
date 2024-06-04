@@ -6,13 +6,12 @@ Contribution is very welcome!
 ## Table of Contents
 1. Hardware
    1. BOM (Hardware Bill-Of-Material)
-3. Software
+2. Software
    1. Ambarella RTOS
    2. Linux OS
    3. Firmware binary Analysis
-4. Smartphone App
+3. Interesting things
    1. Connect DxO-One with Lightning Port to the Android App
-   2. Developer Mode
 
 ## Hardware BOM & Details
 - **ODM Manufacturer:** Ability Enterprise Co., Ltd TAIWAN
@@ -83,7 +82,7 @@ Unpacking the binary with gopro-fw-tools ( https://github.com/evilwombat/gopro-f
 - section_4 - Linux userspace (unconfirmed)
 - section_5 - Firmware-Update OS (unconfirmed)
 
-# Smartphone App
+# Interesting things
 There's a Smartphone App accompanying the Device for iOS, and an Android-App for the (later) USB-C version of the camera.
 
 ## Connect DxO-One with Lightning Port to the Android App
@@ -132,49 +131,3 @@ If everything works as expected, the app will launch, connect to the camera and 
 **Limitations:**
 1. Wi-Fi connection between Smartphone and DXO-ONE doesn't work (apparently some protocol-issue I didn't look into yet)
 2. Not really convenient to use as viewfinder, but good to change settings on the camera (current app-setting is preserved by the camera and kept after disconnecting)
-
-
-## Developer Mode
-There is a hidden Developer Mode in the Android App, which doesn't really serve much of a purpose at this moment. It could however be interesting to learn about the communication between app and Camera.
-
-<details>
-  <summary>Enter Developer Mode</summary>
-
-  1. Start application without Camera connected
-  2. On the "Please connect your DxO ONE" Screen, tap 10x in lower right corner of the screen
-  3. (Developer Menu opens)  
-</details>
-
-<details>
-  <summary>Quit Developer Mode</summary>
-  
-To quit the Developer Mode, you need to disconnect the activated cameras again.
-1. Open Settings-Menu (top-left Gallery button, then select top-left hamburger icon)
-2. Select [Developer Menu]
-3. Disable enabled Camera-Simulators
-</details>
-
-<details>
-  <summary>Content of Developer Mode Menu</summary>
-  
-  ### **1. Camera Simulator**
-  
-  Closed-loop simulator of Camera communication (the App will behave like its connected to a camera, and the simulated Camera will reply as expected with the defined latency)
-  
-  **App-Options:**
-  1. Connect with Camera Simulator (On/Off)
-  2. Simulator communication latency
-  
-  ### **2. Raspberry Pi Camera Server**
-  
-  App will (try to) reach a Raspberry Pi on the local network which runs a (unknown DxO-proprietary) Camera Server to communicate with. Unfortunately there is no image publicly available of Raspberry Pi to respond correctly.
-  
-  **App-Options:**
-  1. Connect with Pi Camera Server (On/Off)
-  2. Host (Select Hostname to connect to)
-  
-  ### **3. Others**
-  **App-Options:**
-  1. Crash the App!
-
-</details>
