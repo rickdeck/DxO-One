@@ -78,11 +78,11 @@ The mobile App contains the firmware binary to update devices with older version
 
 Unpacking the binary with gopro-fw-tools ( https://github.com/evilwombat/gopro-fw-tools ) reveals 6 files:
 - section_0 - Ambarella RTOS
-- section_1 - (unconfirmed) DSP Firmware
+- section_1 - DSP Microcode
 - section_2 - Ambarella ROMFS
-- section_3 - Linux kernel (unconfirmed)
-- section_4 - Linux userspace (unconfirmed)
-- section_5 - Firmware-Update OS (unconfirmed)
+- section_3 - Linux kernel
+- section_4 - Linux Root FS
+- section_5 - Firmware-Update OS
 
 # Interesting things
 There's a Smartphone App accompanying the Device for iOS, and an Android-App for the (later) USB-C version of the camera.
