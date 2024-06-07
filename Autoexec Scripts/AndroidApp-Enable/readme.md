@@ -41,6 +41,7 @@ Possibly, this could work with a lightning port to USB-C adapter (not tested, ha
 
 If everything works as expected, the app will launch, connect to the camera and switch to the viewfinder.
 
-**4. Limitations:**
+**4. Notes & Limitations:**
 1. Wi-Fi connection between Smartphone and DXO-ONE doesn't work (apparently some protocol-issue I didn't look into yet)
-2. Not really convenient to use as viewfinder, but good to change settings on the camera (current app-setting is preserved by the camera and kept after disconnecting)
+2. **IMPORTANT:** The Android App will offer to upgrade the firmware of your device, even if you are on the latest iOS Firmware already! I have not tested what happens if you follow this process, but doing it may brick your device!
+3. Not really convenient to use as viewfinder, but good to change settings on the camera (current app-setting is preserved by the camera and kept after disconnecting)
