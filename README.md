@@ -4,36 +4,14 @@ Unofficial, collected information about the (discontinued) DxO-One Camera, a tin
 Contribution is very welcome!
 
 ## Table of Contents
-1. Hardware
-   1. BOM (Hardware Bill-Of-Material)
-2. Software
+1. Software
    1. Ambarella RTOS
    2. Linux OS
    3. Firmware binary Analysis
-3. Interesting things
+2. Interesting things
    1. Connect DxO-One with Lightning Port to the Android App
 
-More information is available in the [wiki](https://github.com/rickdeck/DxO-One/wiki).
-
-## Hardware BOM & Details
-- **ODM Manufacturer:** Ability Enterprise Co., Ltd TAIWAN
-- **FCC ID:** 2AAD3JA0J0M0
-
-<details>
-  <summary>BOM Details</summary>
-
-  | Role          | Supplier | Component           | Comment|
-  | ------------- |:-------------:|:-------------:|:-------------:|
-  | SoC | Ambarella | A9-A1-RH S1433 N93WA-D ANM1N1 A9S35 |
-  | Audio | Analog Devices | ADAU1382 BCPZ | Audio Stereo codec (for Microphone input) |
-  | NAND storage | SPANSION | ML04G200BH100 |
-  | DRAM | SAMSUNG | K4P8G304E0-AGC2 |
-  | Gyroscope | Invensense | MPU6500 |
-  | Accelerometer | ST | ITG1020 |
-  | Battery | Unknown | 17360 750mAh 3.7V (with soldered cables) |
-  | Wi-Fi | Broadcom | Azurewave BCM43340(?) abgn+BT+FM+NFC |
-  | Wi-Fi Power Aplifier? | Novatek | NT11004 1416-BG HOA7800| Located on Wi-Fi board|
-</details>
+More information is maintained in the [wiki](https://github.com/rickdeck/DxO-One/wiki).
 
 ## Software
 
