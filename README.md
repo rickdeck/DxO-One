@@ -10,10 +10,11 @@ Contribution is very welcome!
    3. Firmware binary Analysis
 2. Interesting things
    1. Connect DxO-One with Lightning Port to the Android App
+   2. Fix DxO-One USB-C Device with outdated Firmware
 
 More information is maintained in the [wiki](https://github.com/rickdeck/DxO-One/wiki).
 
-## Software
+## 1. Software
 
 The device is using Ambarella RTOS as its main OS for controlling the camera hardware and OLED display, and a separate Linux OS to control Wi-Fi functions.
 This is a quite popular chipset for (older) GoPro and other Action Camera clones as well as many Dashcams.
@@ -23,7 +24,7 @@ It seems that in case of the DxO-One, the Linux OS is mostly suspended and only 
 Ambarella OS has a own shell which can accept commands, but as the device is missing a UART-port I didn't find a way so far to connect to it (I suspect that it's possible to switch the USB-Port to UART, but I haven't found a method yet).
 
 
-### Ambarella RTOS
+### 1.1 Ambarella RTOS
 #### autoexec.ash:
 On power-on (sliding the lens-cover open or connecting USB), the OS looks for the file `autoexec.ash` on the SD-Card and, if it exists, executes the shell-commands in it on the RTOS.
 This allows to do a few interesting things, such as enabling logging, switching USB-Modes, executing commands, etc.
@@ -47,7 +48,7 @@ To start investigating the Device, the first step is to re-route logging to a fi
 
 </details>
 
-## Firmware binary Analysis
+## 1.3 Firmware binary Analysis
 The mobile App contains the firmware binary to update devices with older versions.
 
 - **Latest version:** 3.2.0
@@ -62,10 +63,10 @@ Unpacking the binary with gopro-fw-tools ( https://github.com/evilwombat/gopro-f
 - section_4 - Linux Root FS
 - section_5 - Firmware-Update OS
 
-# Interesting things
+# 2. Interesting things
 There's a Smartphone App accompanying the Device for iOS, and an Android-App for the (later) USB-C version of the camera.
 
-## Connect DxO-One with Lightning Port to the Android App
+## 2.1 Connect DxO-One with Lightning Port to the Android App
 There is a way to connect the Apple-variant of DxO-ONE to the Android App (assumed here that the Android device has a USB-C port, but it would also work with micro-USB).
 
 Possibly, this could work with a lightning port to USB-C adapter (not tested, happy to hear if someone tried it), but there is a way to do this via the microUSB port on the back of the device.
@@ -75,3 +76,13 @@ See here: [Enable Lightning via microUSB]( https://github.com/rickdeck/DxO-One/b
 **Limitations:**
 1. Wi-Fi connection between Smartphone and DXO-ONE doesn't work (apparently some protocol-issue I didn't look into yet)
 2. Not really convenient to use as viewfinder, but good to change settings on the camera (current app-setting is preserved by the camera and kept after disconnecting)
+
+## 2.2 Fix DxO-One USB-C Device with outdated Firmware
+If you purchased a DxO-One USB-C Variant online, you may have received a device with very outdated Firmware that cannot connect to the DxO-One Android App.
+(You likely have only received the device without accessories or sales-box, which was probably a swap-unit which still had to be upgraded before shipping.)
+These devices only have an initial firmware, where the camera itself is working, but the USB-C connection to the DxO-One Android-App doesn't work.
+
+If you like to upgrade the device to a usable state, I have prepared a script and a set of files which allow you to upgrade the camera via SD-card.
+
+See here: [Upgrade-USBC-Model]( https://github.com/rickdeck/DxO-One/tree/main/Autoexec%20Scripts/Upgrade-USBC-Model)
+
