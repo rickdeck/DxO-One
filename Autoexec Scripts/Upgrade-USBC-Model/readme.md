@@ -21,7 +21,7 @@ The files in this folder contain a script for the SD-card which performs a parti
 
 
 ### 3. Preparation steps
-1. Copy all files to the root of a microSD card
+1. Copy all files to the root of a microSD card (either from this folder or download the latest release as [zip]( https://github.com/rickdeck/DxO-One/releases/tag/USBC-bringup )
 2. Properly eject the microSD from your PC
 3. Insert microSD into the USB-C DxO-One
 4. Connect DxO-One to a microUSB-charger (NOT a USB Data cable!)
