@@ -1,6 +1,15 @@
 # DxO-One Preservation Project
 Unofficial, collected information about the (discontinued) DxO-One Camera, a tiny camera with a 1" Sony Sensor and f/1.8 lens. 
 
+## Early investigation shows potential for several changes/expansions, such as:
+1. Support to connect iOS Variant to Android - DONE
+2. Support to connect USB-C Variant to iPhone 15 or higher
+3. Additional shot-modes (AE-bracketing, burst,...)
+4. (Multi) camera control via Wi-Fi (Communication via JSON-RPC Protocol)
+5. USB-networking Mode to control and charge camera (by initiating USB in the Linux stack)
+6. Bluetooth Remote-Control integration (Hardware is there, only missing part seems to be the Linux integration)
+
+More information is maintained in the [wiki](https://github.com/rickdeck/DxO-One/wiki).
 Contribution is very welcome!
 
 ## Table of Contents
